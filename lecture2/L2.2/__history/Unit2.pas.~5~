@@ -1,0 +1,23 @@
+﻿unit Unit2;
+
+interface
+
+function m_compute(a, b, c: Real; var DiscrIsAboveZero: Boolean): Real;
+
+implementation
+
+uses
+    Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, System.StrUtils, System.Math;
+
+function m_compute(a, b, c: Real; var DiscrIsAboveZero: Boolean): Real;
+var
+    d: Real;
+begin
+    d := Power(b, 2) - 4 * a * c;
+
+    DiscrIsAboveZero := Boolean(IfThen((d >= 0), 1, 0));
+end;
+
+end.
+
+

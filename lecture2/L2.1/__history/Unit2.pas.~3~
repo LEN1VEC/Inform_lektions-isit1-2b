@@ -1,0 +1,33 @@
+unit Unit2;
+
+interface
+
+function mComputeV(s, t: Real): Real;
+procedure mCompute(s, t, v:Real);
+
+implementation
+
+uses
+    Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, System.StrUtils, System.Math;
+
+function mComputeV(s, t: Real): Real;
+begin
+    Result := s / t;
+end;
+
+procedure mCompute(s, t, v:Real);
+begin
+    if (t > 0) then
+    begin
+         v := mComputeV(s, t);
+         ShowMessage('v: ' + FloatToStr(v));
+    end
+    else
+    begin
+        ShowMessage('t is incorrect');
+    end;
+end;
+
+end.
+
+

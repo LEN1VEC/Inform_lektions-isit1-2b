@@ -1,0 +1,37 @@
+unit Unit2;
+
+interface
+
+procedure mMain(a: Real);
+
+implementation
+
+uses Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+    System.Classes, Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs,
+    Vcl.StdCtrls, System.StrUtils, System.Math;
+
+procedure mMain(a: Real);
+var b, c:Real;
+begin
+     if (a < 1) then
+     begin
+         b := Power(a, 2);
+         c := Sqrt(b);
+
+         if (c = a) then
+         begin
+              ShowMessage('a >= 0');
+         end
+         else
+         begin
+             ShowMessage('a < 0');
+         end;
+
+     end
+     else
+     begin
+         ShowMessage('a >= 1');
+     end;
+end;
+
+end.

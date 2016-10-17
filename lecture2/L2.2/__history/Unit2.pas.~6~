@@ -1,0 +1,27 @@
+unit Unit2;
+
+interface
+
+function mComputeDiscr(a, b, c: Real): Real;
+procedure mComputeRoots(a, b, discr:Real; var x1, x2: Real);
+
+implementation
+
+uses
+    Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, System.StrUtils, System.Math;
+
+function mComputeDiscr(a, b, c: Real): Real;
+begin
+    Result := Power(b, 2) - (4 * a * c);
+end;
+
+procedure mComputeRoots(a, b, discr:Real; var x1, x2: Real);
+begin
+    x1 := ((-1 * b - sqrt(discr)) / (2 * a));
+    showmessage('x1: ' + FloatToStr(x1));
+    x2 := ((-1 * b + sqrt(discr)) / (2 * a));
+end;
+
+end.
+
+

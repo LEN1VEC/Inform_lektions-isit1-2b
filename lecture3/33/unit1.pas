@@ -1,0 +1,77 @@
+unit Unit1;
+
+{$mode objfpc}{$H+}
+
+interface
+
+uses
+  Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, StdCtrls;
+
+type
+
+  { TForm1 }
+
+  TForm1 = class(TForm)
+    Button1: TButton;
+    Edit1: TEdit;
+    Edit2: TEdit;
+    Edit3: TEdit;
+    Label1: TLabel;
+    Label2: TLabel;
+    procedure Button1Click(Sender: TObject);
+  private
+    { private declarations }
+  public
+    { public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.lfm}
+
+{ TForm1 }
+
+procedure TForm1.Button1Click(Sender: TObject);
+var a, b, c, x, d, x1, x2:Double;
+begin
+a:=StrToFloat(Edit1.Text);
+b:=StrToFloat(Edit2.Text);
+c:=StrToFloat(Edit3.Text);
+
+if( a <> 0) then
+    begin
+        d:=b * b - 4 * a * c;
+
+        if(d >= 0) then
+            begin
+                x1:=(-b-Sqrt(d)) / 2 * a;
+                x2:=(-b+Sqrt(d)) / 2 * a;
+                Label2.Caption:='x1 = ' + FloatToStr(x1) + ',' + 'x2 = ' + FloatToStr(x2);
+            end
+    end
+else if(a = 0) then
+    begin
+        if(b = 0) then
+            begin
+                if(c = 0) then
+                    begin
+                        Label2.Caption:='Любое число х является решением ур-я';
+                    end
+        else if(c <> 0) then
+                    begin
+                        Label2.Caption:='Уравнение не имеет решений';
+                    end;
+            end
+        else if(b <> 0) then
+            begin
+                x:= -c / b;
+                Label2.Caption:=FloatToStr(x);
+            end
+    end
+end;
+
+end.
+

@@ -1,0 +1,25 @@
+﻿unit Unit2;
+
+interface
+
+function m_compute(a, b, c: Real; var DiscrIsNotNull: Boolean): Real;
+
+implementation
+
+uses
+    System.Math;
+
+function m_compute(a, b, c: Real; var DiscrIsNotNull: Boolean): Real;
+var
+    d: Real;
+begin
+    d := Power(b, 2) - 4 * a * c;
+
+    if (d >= 0) then
+    DiscrIsNotNull := True;
+
+end;
+
+end.
+
+

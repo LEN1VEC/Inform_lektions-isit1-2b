@@ -1,0 +1,32 @@
+﻿unit Unit2;
+
+interface
+
+function m_compare(x: Real): Real;
+
+implementation
+
+uses
+    System.Math;
+
+function m_compare(x: Real): Real;
+begin
+    if ((0 < x) and (x <= 2)) then
+    begin
+        Result := x;
+    end
+    else if ((5 <= x) and (x < 6)) then
+    begin
+        Result := Power(x, 2);
+    end
+    else if ((8 < x) and (x < 10)) then
+    begin
+        Result := Power(x, 3);
+    end
+    else
+    begin
+        Result := 0;
+    end;
+end;
+
+end.
