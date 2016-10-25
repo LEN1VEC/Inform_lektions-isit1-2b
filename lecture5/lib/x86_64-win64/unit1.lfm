@@ -1,0 +1,61 @@
+object Form1: TForm1
+  Left = 233
+  Height = 240
+  Top = 129
+  Width = 320
+  Caption = 'Task 5.1'
+  ClientHeight = 240
+  ClientWidth = 320
+  LCLVersion = '1.6.0.4'
+  object Edit1: TEdit
+    Left = 8
+    Height = 23
+    Top = 8
+    Width = 80
+    TabOrder = 0
+    Text = 'Х'
+  end
+  object Edit2: TEdit
+    Left = 8
+    Height = 23
+    Top = 40
+    Width = 80
+    TabOrder = 1
+    Text = 'У'
+  end
+  object Edit3: TEdit
+    Left = 8
+    Height = 23
+    Top = 72
+    Width = 80
+    TabOrder = 2
+    Text = 'Z'
+  end
+  object Label1: TLabel
+    Left = 96
+    Height = 15
+    Top = 16
+    Width = 45
+    Caption = 'Деньги1'
+    ParentColor = False
+  end
+  object Button1: TButton
+    Left = 104
+    Height = 25
+    Top = 72
+    Width = 75
+    Caption = 'Решение'
+    OnClick = Button1Click
+    TabOrder = 3
+  end
+  object Label2: TLabel
+    Left = 8
+    Height = 15
+    Top = 104
+    Width = 33
+    Caption = 'Ответ'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+end
