@@ -14,8 +14,6 @@ type
   TForm1 = class(TForm)
     Button1: TButton;
     Edit1: TEdit;
-    Edit2: TEdit;
-    Edit3: TEdit;
     Label1: TLabel;
     Label2: TLabel;
     procedure Button1Click(Sender: TObject);
@@ -35,11 +33,13 @@ implementation
 { TForm1 }
 
 procedure TForm1.Button1Click(Sender: TObject);
-var x, y, z:Integer;
+var a, x, y, z:Integer;
 begin
-x:=StrToInt(Edit1.Text);
-y:=StrToInt(Edit2.Text);
-z:=StrToInt(Edit3.Text);
+a:= StrToInt(Edit1.Text);
+
+x:=a div 100;
+y:=a mod 100;
+z:=(a div 100) mod 100 div 100;
 
 if(y = 1) then
     begin
