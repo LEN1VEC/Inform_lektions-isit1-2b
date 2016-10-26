@@ -38,8 +38,8 @@ begin
 a:= StrToInt(Edit1.Text);
 
 x:=a div 100;
-y:=a mod 100;
-z:=(a div 100) mod 100 div 100;
+z:=a mod 10;
+y:=(a div 10) mod 10;
 
 if(y = 1) then
     begin
