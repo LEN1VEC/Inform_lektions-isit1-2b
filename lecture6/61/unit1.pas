@@ -57,18 +57,46 @@ begin
   if(y = 1) then
       begin
         case z of
-        0: begin S:=S + ''; end;
-        1: begin S:='десять'; end;
-        2: begin S:='двадцать'; end;
-        3: begin S:='тридцать'; end;
-        4: begin S:='сорок'; end;
-        5: begin S:='пятьдесят'; end;
-        6: begin S:='шестьдесят'; end;
-        7: begin S:='семьдесят'; end;
-        8: begin S:='восемьдесят'; end;
-        9: begin S:='девяносто'; end;
+        0: begin S:=S + ' десять'; end;
+        1: begin S:=S + ' одиннадцать'; end;
+        2: begin S:=S + ' двенадцать'; end;
+        3: begin S:=S + ' тринадцать'; end;
+        4: begin S:=S + ' четырнадцать'; end;
+        5: begin S:=S + ' пятнадцать'; end;
+        6: begin S:=S + ' шестнадцать'; end;
+        7: begin S:=S + ' семнадцать'; end;
+        8: begin S:=S + ' восемнадцать'; end;
+        9: begin S:=S + ' девятнадцать'; end;
         end;
-        S:= S + 'рублей';
+        S:= S + ' рублей';
+      end
+  else
+      begin
+        case y of
+        0: begin S:=S + ''; end;
+        1: begin S:=S + ''; end;
+        2: begin S:=S + ' двадцать'; end;
+        3: begin S:=S + ' тридцать'; end;
+        4: begin S:=S + ' сорок'; end;
+        5: begin S:=S + ' пятьдесят'; end;
+        6: begin S:=S + ' шестьдесят'; end;
+        7: begin S:=S + ' семьдесят'; end;
+        8: begin S:=S + ' восемьдесят'; end;
+        9: begin S:=S + ' девяносто'; end;
+        end;
+
+        case z of
+        1: begin S:=S + ' один' + ' рубль'; end;
+        2: begin S:=S + ' два' + ' рубля'; end;
+        3: begin S:=S + ' три' + ' рубля'; end;
+        4: begin S:=S + ' четыре' + ' рубля'; end;
+        5: begin S:=S + ' пять' + ' рублей'; end;
+        6: begin S:=S + ' шесть' + ' рублей'; end;
+        7: begin S:=S + ' семь' + ' рублей'; end;
+        8: begin S:=S + ' восемь' + ' рублей'; end;
+        9: begin S:=S + ' девять' + ' рублей'; end;
+        0: begin S:=S + '' + ' рублей'; end;
+        end;
       end;
   Label1.Caption:=S;
 end;
