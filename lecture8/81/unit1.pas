@@ -34,10 +34,19 @@ implementation
 
 procedure TForm1.Button1Click(Sender: TObject);
 var
-  m, n:Integer;
-  s:Integer;
+  m, n, i, s:Integer;
 begin
+  m:=StrToInt(Edit1.Text);
+  n:=StrToInt(Edit2.Text);
 
+  s:= 0;
+  i:=m;
+
+  for i := 1 to n do
+    begin
+      s:= s + i;
+    end;
+  Label1.Caption:=IntToStr(s);
 end;
 
 end.
